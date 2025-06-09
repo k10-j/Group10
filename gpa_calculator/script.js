@@ -4,9 +4,12 @@ let entries = [];
 // Load data from localStorage on page load
 window.addEventListener('load', loadData);
 
-// Add keyboard event listener for 'S' key
+// Add keyboard event listener for 'S' key (only when not typing in inputs)
 document.addEventListener('keydown', function(event) {
-    if (event.key.toLowerCase() === 's') {
+    // Check if user is typing in an input field
+    const isTypingInInput = event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA';
+    
+    if (event.key.toLowerCase() === 's' && !isTypingInInput) {
         logDataToConsole();
     }
 });
@@ -171,3 +174,4 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('📝 Press "S" to log data to console');
     document.getElementById('assignmentName').focus();
 });
+
