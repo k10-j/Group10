@@ -1,0 +1,201 @@
+#Style.css
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-section {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: 2px solid #e9ecef;
+}
+
+.input-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+button {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.gpa-display {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.gpa-display h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.gpa-value {
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.assignments-list {
+    margin-top: 30px;
+}
+
+.assignments-list h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 10px;
+}
+
+.assignment-item {
+    background: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.assignment-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.assignment-grade {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.instructions {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #2196f3;
+}
+
+.instructions p {
+    margin-bottom: 5px;
+    color: #1565c0;
+    font-weight: 500;
+}
+
+.clear-btn {
+    background: linear-gradient(45deg, #f44336, #e91e63);
+    margin-left: 10px;
+}
+
+.clear-btn:hover {
+    box-shadow: 0 8px 20px rgba(244, 67, 54, 0.3);
+}
+
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+    }
+    
+    input {
+        min-width: 100%;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .gpa-value {
+        font-size: 2.5em;
+    }
+}
+
+
